@@ -1,15 +1,21 @@
 <?php
-print '
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba</title>
-</head>
-<body>
-    <h1>Prueba</h1> 
-</body>
-</html>
-'; 
+//Asignación
+$num = 9;
+$lang = [
+    'es' => 'Español',
+    'en' => 'ingles'
+]; 
+
+//Aritmética 
+echo "Suma 2 + 2 = " . ((int) 2 + (int) 2);
+echo "<br>"; 
+echo "Resta 2 - 2 = " . ((int) 2 - (int) 2); 
+echo "<br>"; 
+echo "Multiplicar 2 * 2 = " . ((int) 2 * (int) 2); 
+echo "<br>"; 
+echo "Divide 2 / 2 = " . ((int) 2 / (int) 2); 
+echo "<br>"; 
+echo "Modulo 2 % 2 = " . ((int) 2 % (int) 2); 
+echo "<br>"; 
+echo "Exponencial 2 ** 2 = " . ((int) 2 ** (int) 2); 
+?> 
