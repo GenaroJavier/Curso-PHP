@@ -5,37 +5,3 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: cadetblue;
 }
-
-.form {
-    width: 50vw;
-    height: 70vh;
-    background-color: crimson;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1rem;
-}
-
-input[type="number"] {
-    width: 50%;
-    height: 60px;
-    background-color: white;
-    padding: 1rem;
-    margin: 1rem;
-    border: none;
-}
-
-input[type="submit"] {
-    width: 40%;
-    height: 50px;
-    background-color: crimson;
-    color: white;
-    font-weight: 600;
-    padding: 0.5rem;
-    border: 1px solid white;
-    border-radius: 1rem;
-    font-size: 1rem;
-}
