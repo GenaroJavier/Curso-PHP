@@ -28,10 +28,23 @@
 
         //Insertar en la BD
 
-        //Consulta SQL para insertar
-        $sql = "INSERT INTO `fotos` (`id`, `nombre`, `ruta`) VALUES (NULL, 'Imagen 1', '/Documents/Curso-PHP/imagenes/');";
-        $conexion->exec($sql);
+        //Consulta SQL para obtener todos los datos
+        $sql = "SELECT * FROM `fotos`";
 
+        //Ejecuta la consulta, para ejecutar con PDO y almacenar los resultados en la variable prepare
+        $sentencia = $conexion->prepare($sql); 
+
+        //Ejecutamos con el metodo execute 
+        $sentencia->execute(); 
+
+        //Obtenemos los datos con el metodo fetchall que nos va a devolver todos los resultados de la setencia. (nos devuelve un arreglo)
+        $resultado=$sentencia->fetchAll(); 
+
+        //Recorremos ese arreglo
+        foreach ($resultado as $registro){
+            print_r("<br>".$registro['nombre']); 
+        }
+        
         } catch (PDOException $error) {
          echo "Error en la conexion: ".$error; 
      }
