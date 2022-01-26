@@ -25,8 +25,20 @@
          $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
          echo "Conexion Exitosa"; 
 
-     } catch (PDOException $error) {
+
+        //Insertar en la BD
+
+        //Consulta SQL para insertar
+        $sql = "INSERT INTO `fotos` (`id`, `nombre`, `ruta`) VALUES (NULL, 'Imagen 1', '/Documents/Curso-PHP/imagenes/');";
+        $conexion->exec($sql);
+
+        } catch (PDOException $error) {
          echo "Error en la conexion: ".$error; 
      }
+
+     /***
+      * El A_I en MySQL significa Auto Incremental 
+      lo que nos permite ir incrementando un dato automaticamente
+      */
 
 ?>
