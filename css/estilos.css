@@ -3,3 +3,30 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+input[type="submit"] {
+    background-color: darkcyan;
+    width: 190px;
+    height: 40px;
+    border-radius: 1rem;
+    border: none;
+    color: #ffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+input[type="submit"]:hover {
+    background-color: #fff;
+    color: darkcyan;
+    border: 2px solid darkcyan;
+}
+
+input[type="text"] {
+    width: 190px;
+    height: 30px;
+}
+
+select, option {
+    width: 190px;
+    height: 30px;
+}
