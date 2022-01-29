@@ -10,6 +10,7 @@
     $chkhtml = ""; 
     $chkcss = ""; 
     $optAnime = "";
+    $Opinion = "";
     //Preguntamos si se realizo un envio por el metodo post 
     if($_POST) {
 
@@ -28,7 +29,7 @@
         $chkcss = (isset($_POST['chkcss'])=="si")?"checked":""; 
 
         $optAnime = (isset(($_POST['selAnime']))?$_POST['selAnime']:"");
-
+        $opinion = (isset($_POST['txtOpinion']))?$_POST['txtOpinion']:""; 
     }
 ?>
 
@@ -58,6 +59,8 @@
         ?>
         <br>
         <?php print_r("Mi anime favorito es: <b>".$optAnime."</b>"); ?>
+        <br>
+        <?php print_r("Tu opinion fue: <b>".$opinion."</b>"); ?>
     <?php } ?>
 
     <form action="index.php" method="post">
@@ -93,11 +96,14 @@
         <br>
         <select name="selAnime" id="">
             <option value="One piece" <?php echo ($optAnime=="One piece")?"selected":""; ?>>One piece</option>
-            <option value="Naruto" <?php echo ($optAnime=="Naruto")?"selected":""; ?>>Naruto</option>
+             <option value="Naruto" <?php echo ($optAnime=="Naruto")?"selected":""; ?>>Naruto</option>
             <option value="Dragon Ball" <?php echo ($optAnime=="Dragon Ball")?"selected":""; ?>>Dragon ball</option>
         </select>
         <br>
         <br>
+        <b>Tu opinión es importante</b>
+        <br>
+        <textarea name="txtOpinion" id="" cols="30" rows="10"><?php echo $opinion?></textarea>
         <input type="submit" value="Enviar Información">
         <br>
         <br>
