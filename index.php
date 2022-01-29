@@ -1,8 +1,6 @@
 <?php
     if($_POST) {
-        print_r($_POST); 
-        echo "<br>"; 
-        print_r($_FILES); 
+        move_uploaded_file($_FILES['archivo']['tmp_name'],$_FILES['archivo']['name']); 
     }
 ?>
 
