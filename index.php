@@ -1,13 +1,15 @@
 <?php 
-    //Especificamos el archivo, si esta dentro de otra carpeta aqui se tiene que poner la rutacontenido.txt
-    $archivo="contenido.txt"; 
+//Ahora nosotros vamos a escribir dentro de un archivo 
+ $nombreArchivo="archivo.txt"; 
 
-    //Abrimos el archivo con la funcion open y especificamos que el formato es de lectura 
-    $archivoAbierto=fopen($archivo, "r"); 
+ //Contenido
+ $contenidoArchivo = "Hola estamos escribiendo dentro de un archivo"; 
 
-    //Leemos el contenido y lo almacenamos dentro de la variable
-    //el segundo parametro es el peso del archivo. 
-    $contenido = fread($archivoAbierto, filesize($archivo)); 
+ //Abrimos el archivo, especificamos el nombre y el modo de ejecucion; 
+ $CrearArchivo = fopen($nombreArchivo, "w"); 
 
-    echo $contenido; 
+ //Escribimos en el archivo, especificamos en que archivo vamos a escribir y el contenido que estara dentro. 
+ fwrite($CrearArchivo, $contenidoArchivo); 
+ fclose($CrearArchivo); 
+
 ?>
