@@ -1,15 +1,12 @@
-<?php 
-//Ahora nosotros vamos a escribir dentro de un archivo 
- $nombreArchivo="archivo.txt"; 
+<?php include "header.php"; ?>
 
- //Contenido
- $contenidoArchivo = "Hola estamos escribiendo dentro de un archivo"; 
+<br>
+<div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Bienvenido</h1>
+        <p class="col-md-8 fs-4">Conoce un poco mas sobre mi trabajo como desarrollador web, utilizando PHP y bootstrap.</p>
+        <button class="btn btn-primary btn-lg" type="button">Iniciar sesión</button>
+      </div>
+</div>
 
- //Abrimos el archivo, especificamos el nombre y el modo de ejecucion; 
- $CrearArchivo = fopen($nombreArchivo, "w"); 
-
- //Escribimos en el archivo, especificamos en que archivo vamos a escribir y el contenido que estara dentro. 
- fwrite($CrearArchivo, $contenidoArchivo); 
- fclose($CrearArchivo); 
-
-?>
+<?php include "footer.php"; ?>
